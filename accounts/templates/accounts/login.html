@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Log In
+{% endblock title %}
+{% block content %}
+    <main>
+        <div>
+            <h1 class="text-center">Login</h1>
+            <div class="form-group col-6 mx-auto">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="row justify-content-center">
+                        <button class="btn btn-success">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock content %}
